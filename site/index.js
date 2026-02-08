@@ -14,8 +14,9 @@ function generate() {
     }
 
     let chars = (deduped + junk).split("")
-    for (let i = 0; i < deduped.length * (6 + Math.floor(Math.random() * 7)); i++) {
-        junk += charset[Math.floor(Math.random() * charset.length)]
+    for (let i = chars.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[chars[i], chars[j]] = [chars[j], chars[i]]
     }
 
     const substr = chars.join("")
@@ -50,4 +51,3 @@ function download() {
     a.click()
     URL.revokeObjectURL(a.href)
 }
-
