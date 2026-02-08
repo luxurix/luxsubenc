@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>luxsubenc</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<div class="card">
+    <div class="header">
+        <h1>luxsubenc</h1>
+        <span>lua string subencoder</span>
+    </div>
+
+    <input id="input" placeholder="enter string">
+
+    <button class="primary" onclick="generate()">generate lua</button>
+
+    <textarea id="output" readonly placeholder="lua output"></textarea>
+
+    <div class="actions">
+        <button class="secondary" onclick="copy()">copy</button>
+        <button class="secondary" onclick="download()">download</button>
+    </div>
+</div>
+
+<script src="./index.js"></script>
+</body>
+</html>
